@@ -1,0 +1,137 @@
+/* Archivo Principal.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* Fondo blanco */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+.header {
+    background-color: #2a3d66; /* Fondo azul oscuro */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 3px solid #4a5f8d; /* Borde azul medio */
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-top: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Ajustar el espacio entre los botones */
+    padding: 0;
+}
+
+.nav-links a {
+    padding: 0.5rem 1rem; /* Ajustar el tamaño del padding */
+    background-color: #4a5f8d; /* Botones azul medio */
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    font-size: 1rem; /* Ajustar el tamaño de fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #6b82b3; /* Hover azul claro */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mencion {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mencion:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+.mencion img {
+    max-width:50%;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mencion h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2a3d66;
+    margin-bottom: 1rem;
+    padding-left:1rem;
+    padding-bottom: 0.5rem;
+}
+
+.mencion h3 {
+    font-size: 1.5rem;
+    color: #4a5f8d;
+    margin-top: 1.5rem;
+}
+
+.mencion p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.mencion ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.mencion ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.footer {
+    background-color: #2a3d66;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+/* Animaciones para los botones */
+.nav-links a {
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para las menciones */
+.mencion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}

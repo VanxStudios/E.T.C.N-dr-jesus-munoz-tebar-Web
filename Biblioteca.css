@@ -1,0 +1,142 @@
+/* Archivo Comunidad.css */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2); /* Degradado de blanco a gris claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #00695c; /* Verde azulado oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #80cbc4; /* Línea inferior verde claro */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para el texto */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+    width:50%;
+    padding: 0.5rem 1rem;
+    background-color: #80cbc4; /* Fondo verde claro */
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+nav ul li:hover {
+    background-color: #004d40; /* Cambio de color en hover a verde oscuro */
+    transform: translateY(-2px); /* Elevación en hover */
+}
+
+nav ul li a {
+    color: #f3ffff; /* Texto verde azulado oscuro */
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Texto blanco en hover */
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #00695c; /* Verde azulado oscuro */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    border-top: 3px solid #80cbc4; /* Línea superior verde claro */
+}
+
+/* Estilos específicos para la Biblioteca Virtual */
+header.biblioteca-header {
+    background-color: #00695c; /* Verde azulado oscuro */
+}
+
+h1.biblioteca-header {
+    font-size: 2.5rem;
+    color: #ffffff; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para el texto */
+}
+
+h2 {
+    color: #00695c;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li {
+    background: #ffffff;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-10px);
+}
+
+ul li a {
+    color: #00695c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #80cbc4;
+}
+
+footer.biblioteca-footer {
+    background-color: #00695c; /* Verde azulado oscuro */
+    color: #f8f7f1;
+}
+
+.img4 {
+    max-width: 100%;
+    clip-path: inset(0 0 0 5%);
+    border-radius: 50px;
+}

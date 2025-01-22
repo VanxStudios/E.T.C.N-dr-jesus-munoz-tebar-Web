@@ -1,0 +1,155 @@
+/* Archivo Principal.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0; /* Fondo claro */
+    color: #333;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal no deseado */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    background-color: #282828; /* Fondo oscuro */
+    color: #fff;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-top: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en múltiples líneas */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a4a4a; /* Color de botón */
+    border-radius: 8px;
+    border: 1px solid #fff; /* Borde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    background-color: #6b6b6b; /* Color de hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    margin: 2rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.678);
+    animation: fadeInUp 1s ease-out;
+}
+
+.info h2 {
+    font-size: 2.5rem;
+    color: #282828;
+    margin-bottom: 1rem;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.info p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #333; /* Texto en negro */
+    animation: fadeInRight 1s ease-out;
+}
+
+.footer {
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    animation: slideInUp 1s ease-out;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,115 @@
+/* Archivo Comunidad.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d; /* Fondo negro */
+    color: #e0e0e0; /* Texto gris claro */
+}
+
+header.alrededores-header {
+    background-color: #212121; /* Fondo gris oscuro */
+    color: #ffd700; /* Texto dorado */
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 4px solid #d4af37; /* Borde dorado oscuro */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+header.alrededores-header h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff; /* Texto blanco */
+}
+
+header.alrededores-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header.alrededores-header nav ul li {
+    margin: 0;
+}
+
+header.alrededores-header nav ul li a.nav-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #ffd700; /* Fondo dorado */
+    color: #0d0d0d; /* Texto negro */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+header.alrededores-header nav ul li a.nav-btn:hover {
+    background-color: #b8860b; /* Hover dorado oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Sombra dorado */
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #1f1f1f; /* Fondo gris oscuro */
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra blanca */
+    transition: transform 0.3s, opacity 0.3s;
+    text-align: center; /* Centra el contenido del section */
+}
+
+section img {
+    max-width: 60%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    border-radius: 10px; /* Esquinas redondeadas para un mejor aspecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mejorar el aspecto */
+}
+
+section:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffd700; /* Texto dorado */
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Texto gris claro */
+}
+
+footer.alrededores-footer {
+    background-color: #212121; /* Fondo gris oscuro */
+    color: #ffd700;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 4px solid #d4af37; /* Borde dorado oscuro */
+    box-shadow: 0 -4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones para los enlaces de navegación */
+header.alrededores-header nav ul li a.nav-btn {
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+header.alrededores-header nav ul li a.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Sombra dorado */
+}
