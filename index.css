@@ -1,19 +1,19 @@
-
+/* Estilos base existentes (sin cambios) */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #D2B48C; /* Fondo caqui claro */
+    background-color: #D2B48C;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-x: hidden;
 }
 
 .header {
-    background-color: #5e1414; /* Rojo oscuro */
+    background-color: #5e1414;
     color: #fff;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem; /* Añadido padding horizontal */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #ececf3;
@@ -23,6 +23,7 @@ body {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan */
     gap: 1rem;
 }
 
@@ -35,8 +36,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    display: inline-block; 
-    font-size: 1.1rem; 
+    display: inline-block;
+    font-size: 1.1rem;
 }
 
 .btn:hover {
@@ -50,19 +51,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Asegura que haya espacio alrededor */
-    max-width: 100%; /* Ajusta el contenido al ancho disponible */
+    padding: 2rem;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
 .info {
     text-align: center;
-    background: #f5deb3; /* Fondo color trigo */
-    padding: 3rem;
-    border-radius: 12px; /* Esquinas redondeadas */
+    background: #f5deb3;
+    padding: 2rem; /* Reducido para móviles */
+    border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Ajusta el contenido al ancho disponible */
+    max-width: 100%;
     box-sizing: border-box;
+    margin: 0 1rem; /* Margen lateral en móviles */
 }
 
 img {
@@ -73,69 +75,111 @@ img {
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3rem;
+    font-size: 2.5rem; /* Tamaño base reducido */
     color: #f0ecde;
     text-shadow: 2px 2px #333;
+    margin: 0.5rem 0; /* Añadido margen vertical */
 }
 
 h2 {
     margin: 0.5rem 0;
     padding-bottom: 2%;
-    color: #8B0000; /* Rojo oscuro */
-    font-size: 2.4rem;
+    color: #8B0000;
+    font-size: 2rem; /* Tamaño base reducido */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
-    color: #474745; /* Texto gris oscuro */
-    font-size: 1.3rem;
+    color: #474745;
+    font-size: 1.1rem; /* Tamaño base reducido */
     margin-bottom: 1.2rem;
     text-align: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-width: 100%; /* Ajusta el contenido al ancho disponible */
+    max-width: 100%;
     box-sizing: border-box;
+    line-height: 1.6; /* Mejor espaciado */
 }
 
 .footer {
-    background-color: #5e1414; /* Rojo oscuro */
-    color: #131111;
+    background-color: #5e1414;
+    color: #fff; /* Cambiado a blanco para contraste */
     text-align: center;
     padding: 1rem;
     box-shadow: 0 -4px 6px rgba(236, 203, 203, 0.2);
     position: relative;
     width: 100%;
-    bottom: 0;
-    left: 0;
     border-top: 3px solid #ececf3;
 }
 
-@keyframes slide-down {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
+/* Media Queries para Responsive */
+@media (max-width: 768px) {
+    /* Estilos para tablets */
+    h1 {
+        font-size: 2.2rem;
     }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .info {
+        padding: 1.5rem;
+    }
+    
+    .buttons {
+        flex-direction: column; /* Botones en columna */
+        align-items: center;
+    }
+    
+    .btn {
+        width: 80%; /* Ancho consistente */
+        text-align: center;
+        margin-bottom: 0.5rem;
     }
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
+@media (max-width: 480px) {
+    /* Estilos para móviles */
+    .header {
+        padding: 1rem 0.5rem;
     }
-    to {
-        opacity: 1;
+    
+    h1 {
+        font-size: 1.8rem;
+        padding: 0 0.5rem; /* Evita cortes */
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        text-align: justify; /* Mejor lectura */
+    }
+    
+    .info {
+        padding: 1rem;
+        margin: 0 0.5rem; /* Menos margen */
+    }
+    
+    .btn {
+        width: 95%; /* Aprovecha mejor el espacio */
+        padding: 0.6rem;
+    }
+    
+    main {
+        padding: 1rem; /* Menos padding */
     }
 }
 
-@keyframes slide-up {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+/* Optimización para pantallas grandes (opcional) */
+@media (min-width: 1200px) {
+    .info {
+        max-width: 1100px; /* Limita ancho en pantallas grandes */
     }
 }
