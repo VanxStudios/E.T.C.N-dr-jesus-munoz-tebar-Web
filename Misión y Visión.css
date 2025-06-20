@@ -1,32 +1,36 @@
-/* Archivo Principal.css */
+/* Archivo Principal.css - Versión Responsive */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f0f0; /* Fondo claro */
+    background: #f0f0f0;
     color: #333;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal no deseado */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Padding relativo */
+    box-sizing: border-box;
 }
 
 .header {
-    background-color: #282828; /* Fondo oscuro */
+    background-color: #282828;
     color: #fff;
-    padding: 2.5rem 3rem;
+    padding: 1.5rem 1rem; /* Reducido para móviles */
     text-align: center;
     animation: fadeInDown 1s ease-out;
-    font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
+    margin: 0.5rem 0;
 }
 
 .navbar {
@@ -37,64 +41,72 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap; /* Permite que los botones se ajusten en múltiples líneas */
+    gap: 0.8rem; /* Espaciado reducido */
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
-    margin: 0;
+    margin: 0.3rem 0; /* Espaciado vertical */
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    padding: 0.75rem 1.5rem;
-    background-color: #4a4a4a; /* Color de botón */
+    padding: 0.7rem 1.2rem; /* Tamaño reducido */
+    background-color: #4a4a4a;
     border-radius: 8px;
-    border: 1px solid #fff; /* Borde */
+    border: 1px solid #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Tamaño base más pequeño */
+    text-align: center;
+    min-width: 120px; /* Ancho mínimo para botones */
 }
 
 .nav-links a:hover {
-    background-color: #6b6b6b; /* Color de hover */
+    background-color: #6b6b6b;
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .info {
-    padding: 4rem 2rem;
+    padding: 2rem; /* Reducido para móviles */
     text-align: center;
     background-color: #fff;
-    margin: 2rem 2rem;
+    margin: 1.5rem auto; /* Centrado y margen reducido */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.678);
     animation: fadeInUp 1s ease-out;
+    width: 90%; /* Ancho relativo */
+    max-width: 1000px; /* Máximo ancho */
+    box-sizing: border-box;
 }
 
 .info h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Tamaño base reducido */
     color: #282828;
     margin-bottom: 1rem;
     animation: fadeInLeft 1s ease-out;
 }
 
 .info p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: #333; /* Texto en negro */
+    font-size: 1rem; /* Tamaño base reducido */
+    margin-bottom: 1.5rem;
+    color: #333;
     animation: fadeInRight 1s ease-out;
+    line-height: 1.6; /* Mejor espaciado para lectura */
 }
 
 .footer {
     background-color: #282828;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+    margin-top: auto; /* Mantiene el footer abajo */
     animation: slideInUp 1s ease-out;
 }
 
@@ -151,5 +163,127 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1024px) {
+    /* Estilos para tablets grandes */
+    .container {
+        padding: 0 1.2rem;
+    }
+    
+    .info {
+        padding: 1.8rem;
+    }
+    
+    .info h2 {
+        font-size: 1.7rem;
+    }
+    
+    .info p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para tablets */
+    .header {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .nav-links {
+        gap: 0.6rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+        min-width: 110px;
+    }
+    
+    .info {
+        padding: 1.5rem;
+        margin: 1.2rem auto;
+        width: 95%;
+    }
+    
+    .info h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para móviles */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .header {
+        padding: 1rem 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        width: 90%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .info {
+        padding: 1.2rem;
+        margin: 1rem auto;
+        width: 98%;
+    }
+    
+    .info h2 {
+        font-size: 1.4rem;
+    }
+    
+    .info p {
+        font-size: 0.9rem;
+        text-align: justify; /* Mejor lectura en móviles */
+    }
+    
+    .footer {
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    /* Estilos para pantallas grandes */
+    .container {
+        max-width: 1400px;
+    }
+    
+    .info h2 {
+        font-size: 2.2rem;
+    }
+    
+    .info p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Opcional: Reducir animaciones en dispositivos móviles para mejorar rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
