@@ -1,28 +1,31 @@
-/* Archivo Principal.css */
+/* Archivo Principal.css - Versión Responsive */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background: #f0f0f0;
     color: #333;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    box-sizing: border-box; /* Incluye padding en el ancho */
 }
 
 .header {
     background-color: #287cad;
     color: #fff;
-    padding: 2rem 0;
+    padding: 1.5rem 0; /* Reducido para móviles */
     text-align: center;
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Tamaño inicial más pequeño */
     font-weight: 700;
+    margin: 0.5rem 0;
 }
 
 .navbar {
@@ -33,20 +36,24 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 1rem; /* Espaciado reducido */
     padding: 0;
 }
 
 .nav-links a {
-    padding: -1rem;
+    padding: 0.8rem 1.2rem; /* Ajustado para móviles */
     background-color: #eee9e9;
     color: #000000;
     border-radius: 10px;
     border: 2px solid #d1cfcf;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Tamaño inicial más pequeño */
     box-shadow: 0 4px 6px rgba(15, 14, 14, 0.1);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px; /* Ancho mínimo para botones */
 }
 
 .nav-links a:hover {
@@ -57,52 +64,174 @@ body {
 
 .about {
     display: flex;
-    flex-wrap: wrap;
-    padding: 4rem 2rem;
+    flex-wrap: wrap; /* Permite el apilamiento en móviles */
+    padding: 2rem; /* Reducido para móviles */
     background-color: #fff;
-    margin: 2rem 2rem;
+    margin: 2rem auto; /* Centrado */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 90%; /* Ancho relativo */
+    max-width: 1200px; /* Máximo ancho */
+    box-sizing: border-box;
 }
 
 .about-image {
     flex: 1;
-    margin-right: 2rem;
+    min-width: 300px; /* Mínimo para evitar compresión excesiva */
+    margin-right: 0; /* Reset para móviles */
+    margin-bottom: 2rem; /* Espacio entre imagen y contenido */
 }
 
 .about-image img {
-    max-width: 100%;
+    width: 100%; /* Imagen adaptable */
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
     flex: 2;
+    min-width: 300px; /* Mínimo para evitar compresión excesiva */
 }
 
 .about-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Tamaño inicial más pequeño */
     color: #282828;
     margin-bottom: 1rem;
 }
 
 .about-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1rem; /* Tamaño inicial más pequeño */
+    margin-bottom: 1.5rem;
     color: #666;
+    line-height: 1.6; /* Mejor espaciado para lectura */
 }
 
 .footer {
     background-color: #282828;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
-/* Animaciones para los botones */
+/* Media Queries para Responsive Design */
+@media (max-width: 1024px) {
+    /* Estilos para tablets grandes */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .about {
+        padding: 1.5rem;
+    }
+    
+    .about-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para tablets */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .nav-links {
+        gap: 0.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        min-width: 110px;
+    }
+    
+    .about {
+        flex-direction: column;
+        margin: 1.5rem auto;
+        width: 95%;
+    }
+    
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para móviles */
+    .container {
+        padding: 0 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        width: 90%;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .about {
+        padding: 1.2rem;
+        margin: 1rem auto;
+        width: 98%;
+    }
+    
+    .about-content h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+    
+    .footer {
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    /* Estilos para pantallas grandes */
+    .container {
+        max-width: 1400px;
+    }
+    
+    .about-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .about-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animaciones para los botones (mantenidas) */
 .nav-links a {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
