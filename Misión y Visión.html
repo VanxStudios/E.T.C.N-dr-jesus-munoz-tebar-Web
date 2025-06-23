@@ -3,35 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.T.C.N Dr. Jesús Muñoz Tébar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="Misión y Visión.css">
+    <title>E.T.C.N Dr. Jesús Muñoz Tébar - Misión y Visión</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Misión y Visión.css"> <!-- Archivo CSS externo -->
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div style="font-size:3.3rem;">Misión y Visión </div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="btn">Inicio</a></li>
-                    <li><a href="Menciones y perfiles.html" class="btn">Menciones Académicas</a></li>
-                    <li><a href="Biblioteca.html" class="btn">Biblioteca Virtual</a></li>
-                    <li><a href="Comunidad.html" class="btn">Comunidad Vuelta del Paraíso</a></li>
-                    <li><a href="Sobre Nosotros.html" class="btn">Sobre Nosotros</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <h1 class="page-title">Misión y Visión</h1>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="Menciones y perfiles.html"><i class="fas fa-graduation-cap"></i> Menciones Académicas</a></li>
+                        <li><a href="Biblioteca.html"><i class="fas fa-book"></i> Biblioteca Virtual</a></li>
+                        <li><a href="Comunidad.html"><i class="fas fa-users"></i> Comunidad</a></li>
+                        <li><a href="Sobre Nosotros.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+    
     <main>
-        <section class="info">
-            <h2>Nuestra Misión</h2>
-            <p>Dar cumplimiento a los objetivos planteados en la normativa legal vigente vinculado a nivel de educación media y profesional de acuerdo a los planes de estudio de la Escuela Técnica en la especialidad de comercio y de servicios administrativos, para egresar técnicos medios en las menciones de administración, asistencia gerencial, contabilidad, informática, mercadeo, seguro y turismo capacitados a nivel cognitivo y poseedores de los valores del respeto a la libertad, igualdad de los derechos humanos, la justicia social, la vida en democracia consiente y participativa, de manera tal que pueda continuar estudios a un nivel superior, ingresar al campo laboral y/o crear microempresas.</p>
-            <h2>Nuestra Visión</h2>
-            <p>Lograr que el cumplimiento de la misión se realice bajo el mejor parámetro educativo dentro de un clima organizacional que garantice alto nivel de armonía, compromiso, creatividad, desempeño laboral, participación, respeto, sentido de pertenencia hacia la institución y trabajo en equipo con los integrantes de la comunidad educativa de manera tal que la institución se mantenga como una gran escuela productora de educación de calidad en el área Técnica Comercial.</p>
-        </section>
+        <div class="container">
+            <div class="mission-vision">
+                <div class="card">
+                    <h2><i class="fas fa-bullseye"></i> Nuestra Misión</h2>
+                    <p>Dar cumplimiento a los objetivos planteados en la normativa legal vigente vinculado a nivel de educación media y profesional de acuerdo a los planes de estudio de la Escuela Técnica en la especialidad de comercio y de servicios administrativos, para egresar técnicos medios en las menciones de administración, asistencia gerencial, contabilidad, informática, mercadeo, seguro y turismo capacitados a nivel cognitivo y poseedores de los valores del respeto a la libertad, igualdad de los derechos humanos, la justicia social, la vida en democracia consiente y participativa, de manera tal que pueda continuar estudios a un nivel superior, ingresar al campo laboral y/o crear microempresas.</p>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-eye"></i> Nuestra Visión</h2>
+                    <p>Lograr que el cumplimiento de la misión se realice bajo el mejor parámetro educativo dentro de un clima organizacional que garantice alto nivel de armonía, compromiso, creatividad, desempeño laboral, participación, respeto, sentido de pertenencia hacia la institución y trabajo en equipo con los integrantes de la comunidad educativa de manera tal que la institución se mantenga como una gran escuela productora de educación de calidad en el área Técnica Comercial.</p>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer class="footer">
-        <p>© 2024 E.T.C.N Dr."Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
+        <div class="container">
+            <p>© 2024 E.T.C.N Dr. "Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
+        </div>
     </footer>
+
+    <script>
+        // Toggle menu para móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            
+            menuToggle.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+                
+                // Cambiar ícono
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace (solo móviles)
+            if (window.innerWidth <= 768) {
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navbar.classList.remove('active');
+                        menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
