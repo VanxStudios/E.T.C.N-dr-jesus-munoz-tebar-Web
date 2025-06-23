@@ -13,39 +13,89 @@ body {
 .header {
     background-color: #5e1414;
     color: #fff;
-    padding: 1.5rem 1rem; /* Añadido padding horizontal */
+    padding: 1.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #ececf3;
 }
 
 .buttons {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los botones se envuelvan */
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 1.2rem; /* Espacio aumentado entre botones */
 }
 
+/* Optimización de botones */
 .btn {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    padding: 0.75rem 1rem;
-    background-color: #8f333d; 
+    padding: 0.85rem 1.5rem; /* Padding aumentado para mejor tacto */
+    background: linear-gradient(145deg, #8f333d, #a03d48); /* Degradado sutil */
     color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    display: inline-block;
-    font-size: 1.1rem;
+    border-radius: 10px; /* Bordes ligeramente más redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    transition: all 0.3s ease;
+    display: inline-flex; /* Mejor alineación de contenido */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem; /* Tamaño de fuente aumentado */
+    font-weight: 600; /* Texto más grueso */
+    border: none;
+    min-width: 150px; /* Ancho mínimo para mejor proporción */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Sombra de texto para mejor legibilidad */
+    letter-spacing: 0.5px; /* Espaciado entre letras mejorado */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
+/* Efecto hover más suave */
 .btn:hover {
-    background-color: #ca6c1f;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(3, 3, 3, 0.2);
+    background: linear-gradient(145deg, #a03d48, #b14753);
+    transform: translateY(-3px); /* Elevación más sutil */
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
 }
 
+/* Efecto de pulsación */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de onda al hacer clic */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+    z-index: -1;
+}
+
+.btn:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(50, 50);
+        opacity: 0;
+    }
+}
+
+/* Resto de estilos... */
 main {
     flex: 1;
     display: flex;
@@ -59,56 +109,81 @@ main {
 .info {
     text-align: center;
     background: #f5deb3;
-    padding: 2rem; /* Reducido para móviles */
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem; /* Padding aumentado */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     max-width: 100%;
     box-sizing: border-box;
-    margin: 0 1rem; /* Margen lateral en móviles */
+    margin: 0 1rem;
 }
 
 img {
     max-width: 100%;
     height: auto;
     padding: 2%;
+    border-radius: 8px; /* Bordes redondeados para imágenes */
 }
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.5rem; /* Tamaño base reducido */
+    font-size: 2.5rem;
     color: #f0ecde;
-    text-shadow: 2px 2px #333;
-    margin: 0.5rem 0; /* Añadido margen vertical */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+    margin: 0.5rem 0 1.5rem; /* Margen inferior aumentado */
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #ca6c1f, #8f333d);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
 }
 
 h2 {
-    margin: 0.5rem 0;
-    padding-bottom: 2%;
+    margin: 1.5rem 0 0.8rem;
+    padding-bottom: 1%;
     color: #8B0000;
-    font-size: 2rem; /* Tamaño base reducido */
+    font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ca6c1f;
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
 }
 
 p {
     color: #474745;
-    font-size: 1.1rem; /* Tamaño base reducido */
-    margin-bottom: 1.2rem;
-    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Texto centrado para mejor lectura */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 100%;
     box-sizing: border-box;
-    line-height: 1.6; /* Mejor espaciado */
+    line-height: 1.7; /* Espaciado aumentado */
+    padding: 0 1rem;
 }
 
 .footer {
-    background-color: #5e1414;
-    color: #fff; /* Cambiado a blanco para contraste */
+    background: linear-gradient(to bottom, #5e1414, #4a0f0f); /* Degradado para footer */
+    color: #fff;
     text-align: center;
-    padding: 1rem;
-    box-shadow: 0 -4px 6px rgba(236, 203, 203, 0.2);
+    padding: 1.2rem;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15);
     position: relative;
     width: 100%;
-    border-top: 3px solid #ececf3;
+    border-top: 3px solid #d8a56a; /* Color que combina con el fondo */
+    font-size: 1.05rem;
 }
 
 /* Media Queries para Responsive */
@@ -127,59 +202,95 @@ p {
     }
     
     .info {
-        padding: 1.5rem;
+        padding: 1.8rem;
     }
     
     .buttons {
-        flex-direction: column; /* Botones en columna */
+        flex-direction: column;
         align-items: center;
+        gap: 0.9rem;
     }
     
     .btn {
-        width: 80%; /* Ancho consistente */
+        width: 85%; /* Ancho más equilibrado */
         text-align: center;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
+        padding: 0.9rem 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Efecto hover para dispositivos táctiles */
+    .btn:hover {
+        transform: none;
+        background: linear-gradient(145deg, #8f333d, #a03d48);
     }
 }
 
 @media (max-width: 480px) {
     /* Estilos para móviles */
     .header {
-        padding: 1rem 0.5rem;
+        padding: 1.2rem 0.5rem;
     }
     
     h1 {
-        font-size: 1.8rem;
-        padding: 0 0.5rem; /* Evita cortes */
+        font-size: 1.9rem;
+        padding: 0 0.5rem;
+    }
+    
+    h1::after {
+        width: 60px;
+        height: 3px;
     }
     
     h2 {
         font-size: 1.5rem;
     }
     
+    h2::after {
+        width: 50px;
+        height: 2px;
+    }
+    
     p {
         font-size: 0.95rem;
-        text-align: justify; /* Mejor lectura */
+        text-align: center;
+        padding: 0;
     }
     
     .info {
-        padding: 1rem;
-        margin: 0 0.5rem; /* Menos margen */
+        padding: 1.4rem;
+        margin: 0 0.5rem;
     }
     
     .btn {
-        width: 95%; /* Aprovecha mejor el espacio */
-        padding: 0.6rem;
+        width: 90%;
+        padding: 0.85rem;
+        font-size: 1.05rem;
     }
     
     main {
-        padding: 1rem; /* Menos padding */
+        padding: 1.2rem;
+    }
+    
+    .buttons {
+        gap: 0.8rem;
+        margin-top: 1.2rem;
     }
 }
 
-/* Optimización para pantallas grandes (opcional) */
 @media (min-width: 1200px) {
     .info {
-        max-width: 1100px; /* Limita ancho en pantallas grandes */
+        max-width: 1100px;
+        padding: 3rem;
+    }
+    
+    .btn {
+        min-width: 170px;
+        padding: 1rem 1.8rem;
+        font-size: 1.2rem;
+    }
+    
+    .buttons {
+        gap: 1.5rem;
     }
 }
