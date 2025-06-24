@@ -4,39 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - E.T.C.N Dr. Jesús Muñoz Tébar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Sobre Nosotros.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">Sobre Nosotros</div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Misión y Visión.html">Misión y Visión</a></li>
-                    <li><a href="Menciones y perfiles.html">Menciones Académicas</a></li>
-                    <li><a href="Biblioteca.html">Biblioteca Virtual</a></li>
-                    <li><a href="Comunidad.html">Comunidad Vuelta del Paraíso</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="mobile-header">
+                    <button class="menu-toggle" aria-label="Menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">Sobre Nosotros</h1>
+                </div>
+                
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="Misión y Visión.html" class="nav-btn"><i class="fas fa-bullseye"></i> Misión y Visión</a></li>
+                        <li><a href="Menciones y perfiles.html" class="nav-btn"><i class="fas fa-graduation-cap"></i> Menciones Académicas</a></li>
+                        <li><a href="Biblioteca.html" class="nav-btn"><i class="fas fa-book"></i> Biblioteca Virtual</a></li>
+                        <li><a href="Comunidad.html" class="nav-btn"><i class="fas fa-users"></i> Comunidad</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+    
+    <!-- Contenido Principal -->
     <main>
-        <section class="about">
-            <div class="about-image">
-                <img src="Liceo Muñoz Tébar.jpg" alt="Entrada de la Institución">
-            </div>
-            <div class="about-content">
-                <h1>Sobre Nosotros</h1>
-                <p>La Escuela Técnica Comercial Nacional Dr. Jesús Muñoz Tébar es una institución educativa dedicada a proporcionar una educación integral y de calidad. Fomentamos el desarrollo personal y profesional de nuestros estudiantes, con sólidos principios éticos y morales, para contribuir al progreso y bienestar de la sociedad.</p>
-                <p>Una institución educativa que comprende seis años de estudios, basados en el aprendizaje por menciones, dirigido a jóvenes cuya aptitud, interés, necesidad y vocación esté orientada a la formación para el progreso tecnológico, el trabajo productivo y la producción de bienes y servicios para la comunidad y la sociedad, permitiendo al egresado incorporarse de inmediato al campo ocupacional y proseguir sus estudios a nivel superior.</p>
-                <p>Nuestra institución se destaca por su excelencia académica, innovación y compromiso social, formando individuos competentes, responsables y comprometidos con el desarrollo sostenible de nuestra comunidad y el país.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section id="about" class="content-section">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="Liceo Muñoz Tébar.jpg" alt="Entrada de la Institución">
+                    </div>
+                    <div class="about-text">
+                        <h2>Sobre Nosotros</h2>
+                        <p>La Escuela Técnica Comercial Nacional Dr. Jesús Muñoz Tébar es una institución educativa dedicada a proporcionar una educación integral y de calidad. Fomentamos el desarrollo personal y profesional de nuestros estudiantes, con sólidos principios éticos y morales, para contribuir al progreso y bienestar de la sociedad.</p>
+                        <p>Una institución educativa que comprende seis años de estudios, basados en el aprendizaje por menciones, dirigido a jóvenes cuya aptitud, interés, necesidad y vocación esté orientada a la formación para el progreso tecnológico, el trabajo productivo y la producción de bienes y servicios para la comunidad y la sociedad, permitiendo al egresado incorporarse de inmediato al campo ocupacional y proseguir sus estudios a nivel superior.</p>
+                        <p>Nuestra institución se destaca por su excelencia académica, innovación y compromiso social, formando individuos competentes, responsables y comprometidos con el desarrollo sostenible de nuestra comunidad y el país.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+    
+    <!-- Footer simplificado -->
     <footer class="footer">
-        <p>© 2024 E.T.C.N Dr. Jesús Muñoz Tébar</p>
+        <div class="container">
+            <p class="copyright">© 2024 E.T.C.N Dr. "Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
+        </div>
     </footer>
+    
+    <script>
+        // Toggle del menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            
+            // Cambiar ícono
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-btn').forEach(anchor => {
+            anchor.addEventListener('click', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                    document.querySelector('.menu-toggle i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Animación de scroll para elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
