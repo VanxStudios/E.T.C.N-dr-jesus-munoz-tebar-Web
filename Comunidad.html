@@ -13,10 +13,13 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <button class="menu-toggle" aria-label="Menú">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <h1 class="page-title">Comunidad Vuelta del Paraíso</h1>
+                <div class="mobile-header">
+                    <button class="menu-toggle" aria-label="Menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">Comunidad Vuelta del Paraíso</h1>
+                </div>
+                
                 <nav class="navbar">
                     <ul class="nav-links">
                         <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a></li>
@@ -78,24 +81,14 @@
             }
         });
 
-        // Animación suave al hacer clic en enlaces de navegación
+        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-btn').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Cerrar menú móvil si está abierto
-                    if (document.querySelector('.navbar').classList.contains('active')) {
-                        document.querySelector('.navbar').classList.remove('active');
-                        document.querySelector('.menu-toggle i').classList.remove('fa-times');
-                        document.querySelector('.menu-toggle i').classList.add('fa-bars');
-                    }
+            anchor.addEventListener('click', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                    document.querySelector('.menu-toggle i').classList.add('fa-bars');
                 }
             });
         });
