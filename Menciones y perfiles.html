@@ -11,19 +11,27 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <i class="fas fa-graduation-cap"></i>
-                Menciones y Perfiles Académicos
+            <div class="header-content">
+                <div class="mobile-header">
+                    <button class="menu-toggle" aria-label="Menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Menciones Académicas</span>
+                    </div>
+                </div>
+                
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="Misión y Visión.html" class="nav-btn"><i class="fas fa-bullseye"></i> Misión y Visión</a></li>
+                        <li><a href="Comunidad.html" class="nav-btn"><i class="fas fa-users"></i> Comunidad</a></li>
+                        <li><a href="Biblioteca.html" class="nav-btn"><i class="fas fa-book"></i> Biblioteca</a></li>
+                        <li><a href="Sobre Nosotros.html" class="nav-btn"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="Misión y Visión.html"><i class="fas fa-bullseye"></i> Misión y Visión</a></li>
-                    <li><a href="Comunidad.html"><i class="fas fa-users"></i> Comunidad</a></li>
-                    <li><a href="Biblioteca.html"><i class="fas fa-book"></i> Biblioteca</a></li>
-                    <li><a href="Sobre Nosotros.html"><i class="fas fa-info-circle"></i> Nosotros</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
     
@@ -212,6 +220,34 @@
     </a>
 
     <script>
+        // Toggle del menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            
+            // Cambiar ícono
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-btn').forEach(anchor => {
+            anchor.addEventListener('click', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                    document.querySelector('.menu-toggle i').classList.add('fa-bars');
+                }
+            });
+        });
+
         // Botón de volver arriba
         const backToTopButton = document.getElementById('backToTop');
         
