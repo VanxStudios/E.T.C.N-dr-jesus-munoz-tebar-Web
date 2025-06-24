@@ -3,89 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Virtual</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    <title>Biblioteca Virtual - E.T.C.N "Dr. Jesús Muñoz Tébar"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Biblioteca.css">
 </head>
 <body>
+    <!-- Header con botones mejorados -->
     <header class="biblioteca-header">
-        <h1>Biblioteca Virtual</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Misión y Visión.html">Misión y Visión</a></li>
-                <li><a href="Menciones y perfiles.html">Menciones Académicas</a></li>
-                <li><a href="Comunidad.html">Comunidad Vuelta del Paraiso</a></li>
-                <li><a href="Sobre Nosotros.html">Sobre nosotros</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="mobile-header">
+                <button class="menu-toggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Biblioteca Virtual</h1>
+            </div>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="Misión y Visión.html" class="nav-btn"><i class="fas fa-bullseye"></i> Misión y Visión</a></li>
+                    <li><a href="Menciones y perfiles.html" class="nav-btn"><i class="fas fa-graduation-cap"></i> Menciones Académicas</a></li>
+                    <li><a href="Comunidad.html" class="nav-btn"><i class="fas fa-users"></i> Comunidad</a></li>
+                    <li><a href="Sobre Nosotros.html" class="nav-btn"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
-        <section id="libros">
-            <h2 style="text-align: center;">Libros Disponibles</h2>
-            <ul>
-                <li><a href="https://es.scribd.com/document/338361089/Castellano-y-Literatura-1-pdf">Castellano y Literatura 1er Año
-                <div class="img4">
-                    <img src="https://html.scribdassets.com/1jh4kid60w5p2j0w/images/1-13acba8522.jpg" height="250" alt=""></a></li>
+        <div class="container">
+            <h2>Libros Disponibles</h2>
+            
+            <div class="books-grid">
+                <!-- Libro 1 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/1jh4kid60w5p2j0w/images/1-13acba8522.jpg" alt="Castellano y Literatura 1er Año" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Castellano y Literatura 1er Año</h3>
+                        <a href="https://es.scribd.com/document/338361089/Castellano-y-Literatura-1-pdf" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/doc/98757701/Matematica-Basica&ved=2ahUKEwjdsLf8x9WJAxWIgoQIHTstDMEQFnoECBoQAQ&usg=AOvVaw3gjxaZrCVQxpsSF0LnQm6r">Matemática Básica
-                    <div class="img4">
-                    <img src="https://html.scribdassets.com/8rcdhwspa81oso7i/images/1-139d366e96.jpg" 
-                    height="230" width="175" alt=""></a></li>
+                
+                <!-- Libro 2 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/8rcdhwspa81oso7i/images/1-139d366e96.jpg" alt="Matemática Básica" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Matemática Básica</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/doc/98757701/Matematica-Basica&ved=2ahUKEwjdsLf8x9WJAxWIgoQIHTstDMEQFnoECBoQAQ&usg=AOvVaw3gjxaZrCVQxpsSF0LnQm6r" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/doc/151705120/Fisica-General-Libro-Completo-pdf&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8QFnoECBcQAQ&usg=AOvVaw3_2mN8EQF_ReSVofoFrKkU">Física General (Libro Completo)
-                <div class="img4">
-                    <img src="https://elsolucionario.net/wp-content/archivos/2014/10/fisica-general-ignacio-martin-bragado-1ra-edicion-250x325.jpg" height="230" alt=""></a></li>
+                
+                <!-- Libro 3 -->
+                <div class="book-card">
+                    <img src="https://elsolucionario.net/wp-content/archivos/2014/10/fisica-general-ignacio-martin-bragado-1ra-edicion-250x325.jpg" alt="Física General" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Física General (Libro Completo)</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/doc/151705120/Fisica-General-Libro-Completo-pdf&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8QFnoECBcQAQ&usg=AOvVaw3_2mN8EQF_ReSVofoFrKkU" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                    <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/511503146/FISICA-RACSO&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIGxAD&usg=AOvVaw2uy9elTf1-mvUzVa-agOfe">Física Racso
-                <div class="img4">             
-                        <img src="https://html.scribdassets.com/5tms2t3yps8q7b60/images/1-63fb297b91.jpg" height="250" width="180" alt=""></a></li>
-                </div>  
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/493911873/ebook-juegos-educacion-fisica&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHBAD&usg=AOvVaw0SJB8VvbhoOVeUQuUiztQH">Ebook Juegos Educacion Física
-                <div class="img4">
-                        <img src="https://html.scribdassets.com/9dh54sy4g8f7pvk/images/1-19bb0c7db6.jpg" height="250" alt=""></a></li>
+                
+                <!-- Libro 4 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/5tms2t3yps8q7b60/images/1-63fb297b91.jpg" alt="Física Racso" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Física Racso</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/511503146/FISICA-RACSO&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIGxAD&usg=AOvVaw2uy9elTf1-mvUzVa-agOfe" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/393141478/Libro-Fisica-4to-Ano&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHRAD&usg=AOvVaw2z7BJC2XydToKWU1gNBvBv">Libro Física 4to Año
-                <div class="img4">
-                <img src="https://imgv2-2-f.scribdassets.com/img/document/393141478/149x198/d3c952bc4b/1723830657?v=1" height="230" width="175" alt=""></a></li>
+                
+                <!-- Libro 5 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/9dh54sy4g8f7pvk/images/1-19bb0c7db6.jpg" alt="Ebook Juegos Educación Física" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Ebook Juegos Educación Física</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/493911873/ebook-juegos-educacion-fisica&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHBAD&usg=AOvVaw0SJB8VvbhoOVeUQuUiztQH" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/427441383/Libro-de-Apoyo-Fisica-2&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHhAD&usg=AOvVaw35cWPYFYOvaQzfLoWI8DCZ">Libro de Apoyo Física 2
-                <div class="img4">
-                <img src="https://html.scribdassets.com/53gowl7dq879ff8a/images/1-2783c254e8.jpg" height="250" alt=""></a></li>
-                        </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/395408151/Libro-Quimica-3er-Ano&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQFnoECBkQAQ&usg=AOvVaw0dYp57SEuSKJRLUg9TtsA4">Libro Teoría Química 3er Año
-                <div class="img4">
-                <img src="https://html.scribdassets.com/3byw67i3i86oqwjw/images/1-7fb3f1e666.jpg" height="250" alt=""></a></li>
+                
+                <!-- Libro 6 -->
+                <div class="book-card">
+                    <img src="https://imgv2-2-f.scribdassets.com/img/document/393141478/149x198/d3c952bc4b/1723830657?v=1" alt="Libro Física 4to Año" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Libro Física 4to Año</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/393141478/Libro-Fisica-4to-Ano&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHRAD&usg=AOvVaw2z7BJC2XydToKWU1gNBvBv" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/561448276/Quimica&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFBAD&usg=AOvVaw0D0RjWDwah2NqZSxpdSC1B">Química Lumbreras Editores
-                <div class="img4">
-                <img src="https://html.scribdassets.com/3jlawmd6689ktiky/images/1-d497306719.jpg" height="250" width="170" alt=""></a></li>
+                
+                <!-- Libro 7 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/53gowl7dq879ff8a/images/1-2783c254e8.jpg" alt="Libro de Apoyo Física 2" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Libro de Apoyo Física 2</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/427441383/Libro-de-Apoyo-Fisica-2&ved=2ahUKEwiFg-7yyNWJAxUQfDABHWPwEi8Qr4kDegQIHhAD&usg=AOvVaw35cWPYFYOvaQzfLoWI8DCZ" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/548917849/LIBRO-DE-QUI-MICA-ELECTIVO-COMPLETO&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFxAD&usg=AOvVaw0Frj4u2UeCI14q79XtrKLW">Libro de Química Electivo Completo
-                <div class="img4">
-                <img src="https://html.scribdassets.com/6bq40sxwzk9d6a8l/images/1-e0e9505496.jpg" height="250" alt=""></a></li>
+                
+                <!-- Libro 8 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/3byw67i3i86oqwjw/images/1-7fb3f1e666.jpg" alt="Libro Teoría Química 3er Año" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Libro Teoría Química 3er Año</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/395408151/Libro-Quimica-3er-Ano&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQFnoECBkQAQ&usg=AOvVaw0dYp57SEuSKJRLUg9TtsA4" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/699732199/apuntes-de-quimica-organica-estudiasencillo&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFRAD&usg=AOvVaw2nItj9og0j3Db3TAGO9lZv">Apuntes de Química Orgánica
-                <div class="img4">
-                <img src="https://html.scribdassets.com/4v92o2yfcwbwxin4/images/1-74e407d769.jpg" height="250" alt=""></a></li>
+                
+                <!-- Libro 9 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/3jlawmd6689ktiky/images/1-d497306719.jpg" alt="Química Lumbreras Editores" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Química Lumbreras Editores</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/561448276/Quimica&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFBAD&usg=AOvVaw0D0RjWDwah2NqZSxpdSC1B" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.scribd.com/document/756036326/El-libro-de-Bill-1&ved=2ahUKEwiYtenjydWJAxWDg4QIHfUKK50Qr4kDegQIFRAD&usg=AOvVaw0zfTNjemUsi5dNEYEHd068">El Libro de Bill
-                <div class="img4">
-                <img src="https://html.scribdassets.com/3donopnav4cvd5jz/images/1-4d43e915ba.jpg" height="250" width="180" alt=""></a></li>
+                
+                <!-- Libro 10 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/6bq40sxwzk9d6a8l/images/1-e0e9505496.jpg" alt="Libro de Química Electivo Completo" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Libro de Química Electivo Completo</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/548917849/LIBRO-DE-QUI-MICA-ELECTIVO-COMPLETO&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFxAD&usg=AOvVaw0Frj4u2UeCI14q79XtrKLW" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <li><a href="https://es.scribd.com/docs/Science-Mathematics/Physics">Colección de libros y documentos de Física
-                <img src="https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg" height="270" alt=""></a></li>
-                <li><a href="https://es.scribd.com/docs/Science-Mathematics/Chemistry">Colección de libros y documentos de Química
-                <img src="https://i.pinimg.com/736x/74/66/49/746649eb088b4c21a7feacf044bf6d3e.jpg" height="250" alt=""></a></li>
-                <!-- Agrega más enlaces a libros aquí -->
-            </ul>
-        </section>
+                
+                <!-- Libro 11 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/4v92o2yfcwbwxin4/images/1-74e407d769.jpg" alt="Apuntes de Química Orgánica" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Apuntes de Química Orgánica</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://es.scribd.com/document/699732199/apuntes-de-quimica-organica-estudiasencillo&ved=2ahUKEwitltO-ydWJAxXzQzABHRZsOUAQr4kDegQIFRAD&usg=AOvVaw2nItj9og0j3Db3TAGO9lZv" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Libro 12 -->
+                <div class="book-card">
+                    <img src="https://html.scribdassets.com/3donopnav4cvd5jz/images/1-4d43e915ba.jpg" alt="El Libro de Bill" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">El Libro de Bill</h3>
+                        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.scribd.com/document/756036326/El-libro-de-Bill-1&ved=2ahUKEwiYtenjydWJAxWDg4QIHfUKK50Qr4kDegQIFRAD&usg=AOvVaw0zfTNjemUsi5dNEYEHd068" class="book-link">Ver libro <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Libro 13 -->
+                <div class="book-card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg" alt="Colección de libros de Física" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Colección de libros y documentos de Física</h3>
+                        <a href="https://es.scribd.com/docs/Science-Mathematics/Physics" class="book-link">Ver colección <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Libro 14 -->
+                <div class="book-card">
+                    <img src="https://i.pinimg.com/736x/74/66/49/746649eb088b4c21a7feacf044bf6d3e.jpg" alt="Colección de libros de Química" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">Colección de libros y documentos de Química</h3>
+                        <a href="https://es.scribd.com/docs/Science-Mathematics/Chemistry" class="book-link">Ver colección <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coming-soon">
+                <h2>Próximamente...</h2>
+                <p>Estamos trabajando para agregar más recursos educativos a nuestra biblioteca</p>
+            </div>
+            
+            <div class="source">
+                <h4><i class="fas fa-book"></i> Fuente: Scribd</h4>
+            </div>
+        </div>
     </main>
-    <h2 style="text-align: center;">Proximamente...</h2>
-    <h4 style="color: blueviolet;">Source: Scribd</h4>
+    
     <footer class="biblioteca-footer">
         <p>© 2024 E.T.C.N Dr."Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
     </footer>
-    <script src="Biblioteca.js"></script>
+    
+    <script>
+        // Toggle del menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            
+            // Cambiar ícono
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-btn').forEach(anchor => {
+            anchor.addEventListener('click', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                    document.querySelector('.menu-toggle i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Animación de scroll para elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.book-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
