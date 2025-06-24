@@ -1,3 +1,4 @@
+/* styles.css */
 /* Variables para mantener consistencia */
 :root {
     --primary-color: #1a3a6c;
@@ -361,7 +362,7 @@ main {
     transform: scale(1.1);
 }
 
-/* Media Queries optimizadas */
+/* Media Queries optimizadas - MEJORAS ESPECÍFICAS PARA MÓVILES */
 @media (max-width: 768px) {
     .mobile-header {
         display: flex;
@@ -435,8 +436,9 @@ main {
         border-radius: 8px;
     }
     
+    /* MEJORA: Aumentar padding horizontal en contenido para móviles */
     .content-section {
-        padding: 1.8rem;
+        padding: 1.8rem 1.5rem; /* Más espacio horizontal */
     }
     
     .container {
@@ -456,11 +458,29 @@ main {
     .about-content {
         flex-direction: column;
     }
+    
+    /* MEJORA: Ajustar espaciado de texto en móviles */
+    .about-text {
+        padding: 0 0.5rem; /* Espacio adicional alrededor del texto */
+    }
+    
+    .content-section p {
+        text-align: left; /* Mejor alineación para móviles */
+        margin-bottom: 1.5rem; /* Más espacio entre párrafos */
+        font-size: 1.05rem; /* Tamaño ligeramente mayor */
+    }
+    
+    .content-section h2 {
+        font-size: 1.6rem; /* Tamaño más adecuado para móviles */
+        margin-bottom: 1.8rem; /* Más espacio debajo de títulos */
+    }
 }
 
 @media (max-width: 480px) {
+    /* MEJORA: Ajustes adicionales para pantallas pequeñas */
     .content-section {
-        padding: 1.5rem;
+        padding: 1.5rem 1.2rem; /* Más espacio horizontal */
+        margin-bottom: 2rem; /* Más espacio entre secciones */
     }
     
     .header {
@@ -473,6 +493,7 @@ main {
     
     .about-image {
         min-width: 100%;
+        margin-bottom: 1.5rem; /* Espacio adicional debajo de la imagen */
     }
     
     .page-title {
@@ -483,6 +504,22 @@ main {
         width: 45px;
         height: 45px;
         font-size: 1.5rem;
+    }
+    
+    /* MEJORA: Ajustes específicos para texto en pantallas pequeñas */
+    .content-section p {
+        font-size: 1rem; /* Tamaño óptimo para lectura */
+        line-height: 1.8; /* Mejor espaciado entre líneas */
+        margin-bottom: 1.8rem; /* Más espacio entre párrafos */
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem; /* Ajuste adicional para contenedor */
     }
 }
 
