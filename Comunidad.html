@@ -4,44 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E.T.C.N "Dr. Jesús Muñoz Tébar" - Comunidad Vuelta del Paraíso</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Comunidad.css">
 </head>
 <body>
-    <header class="alrededores-header">
-        <h1>Comunidad Vuelta del Paraíso</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-btn">Inicio</a></li>
-                <li><a href="Misión y Visión.html" class="nav-btn">Misión y Visión</a></li>
-                <li><a href="Menciones y perfiles.html" class="nav-btn">Menciones Académicas</a></li>
-                <li><a href="Biblioteca.html" class="nav-btn">Biblioteca Virtual</a></li>
-                <li><a href="Sobre Nosotros.html" class="nav-btn">Sobre Nosotros...</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-toggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Comunidad Vuelta del Paraíso</h1>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="Misión y Visión.html" class="nav-btn"><i class="fas fa-bullseye"></i> Misión y Visión</a></li>
+                        <li><a href="Menciones y perfiles.html" class="nav-btn"><i class="fas fa-graduation-cap"></i> Menciones Académicas</a></li>
+                        <li><a href="Biblioteca.html" class="nav-btn"><i class="fas fa-book"></i> Biblioteca Virtual</a></li>
+                        <li><a href="Sobre Nosotros.html" class="nav-btn"><i class="fas fa-users"></i> Sobre Nosotros...</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
+    
+    <!-- Contenido Principal -->
     <main>
-        <section id="historia">
-            <h2>Historia y Ubicación</h2>
-            <img src="Foto de Comunidad.jpg">
-            <p>En sus inicios, la ciudad de Los Teques tenía como Consejo Comunal el "Ezequiel Zamora", el cual disponía de una gran cantidad de personas. Sin embargo, no abarcaba las necesidades de la comunidad, y por esta razón se decidió la separación general. El 25 de noviembre de 2019 se creó formalmente el Consejo Comunal Vuelta El Paraíso por medio de elecciones. Estos registros deben renovarse cada 2 años.</p>
-            <p>La Comuna Vuelta el Paraíso se encuentra ubicada en la ciudad de Los Teques, capital del estado Miranda en Venezuela. Esta comuna es conocida por ser una de las más antiguas de la ciudad y por su lucha constante por mejorar la calidad de vida de sus habitantes.</p>
-            <p>Los orígenes de esta comuna se remontan a principios del siglo XX, cuando la zona era una finca de cultivo de café y cacao. Con el paso del tiempo, la finca fue subdividida y vendida, lo que dio lugar al surgimiento de una comunidad que se dedicaba a la agricultura y la ganadería.</p>
-            <p>En las décadas de los 60 y 70, la Comuna Vuelta el Paraíso sufrió un importante proceso de migración debido a la industrialización que se llevaba a cabo en la ciudad de Los Teques. Muchos habitantes de la comuna emigraron en busca de mejores trabajos y oportunidades.</p>
-            <p>Hay una festividad particular de la comuna "Vuelta el Paraíso" que se celebra cada 31 de diciembre desde hace más de 40 años. En esta festividad, la comunidad se reúne para disfrutar de la música Gaita en la conocida "Esquina de Dato", cuyo nombre se debe a que las personas locales compartían entre ellos información acerca de los datos de caballos cuando jugaban a apostar 5 y 6 en sus tiempos.</p>
-            <p>En el año 2000, se inició un proceso de organización y lucha de la comunidad para la creación de la Comuna Vuelta el Paraíso. Se crearon diversos colectivos y organizaciones que impulsaron la organización comunal y la mejora de la calidad de vida de sus habitantes.</p>
-            <p>El conocido tequeño, plato tradicional venezolano, nació en la comunidad Vuelta el Paraíso, fabricado por las hermanas Báez en la década de 1920. El 21 de octubre de 2023 se hizo historia al fabricar el tequeño más grande del mundo, con una longitud de 15,30 metros, ganando un récord Guinness.</p>
-            <p>Actualmente, la Comuna Vuelta el Paraíso cuenta con una amplia variedad de proyectos y programas comunitarios, entre los que destacan la construcción de viviendas, la creación de huertos urbanos, la promoción de la cultura y el deporte, entre otros. Es un ejemplo de lucha y organización comunal en la ciudad de Los Teques, que ha mejorado la calidad de vida de sus habitantes mediante la creación de una amplia variedad de proyectos y programas comunitarios.</p>
-        </section>
-        <section id="relacion">
-            <h2>Relación Comunidad-Institución</h2>
-            <p>En la comunidad del Consejo Comunal Vuelta El Paraíso está ubicada la E.T.C.N Dr. Jesús Muñoz Tébar. Es una institución pública educativa reconocida como una excelente opción para preparar estudiantes como técnicos medios a través de varias décadas.</p>
-            <p>En la actualidad, la Escuela Técnica Comercial Nacional Dr. Jesús Muñoz Tébar cuenta con una matrícula de 459 alumnos en el periodo 2022-2023, dispone de 27 aulas y 18 profesores. Por ser una escuela técnica comercial, se imparten cinco menciones, las cuales son: aduanas, administración, contabilidad, telemática, turismo y tributaria, en un horario de 7:00 a.m. a 5:20 p.m.</p>
-        </section>
+        <div class="container">
+            <section id="historia" class="content-section">
+                <h2>Historia y Ubicación</h2>
+                <img src="Foto de Comunidad.jpg" alt="Comunidad Vuelta del Paraíso" class="community-image">
+                <p>En sus inicios, la ciudad de Los Teques tenía como Consejo Comunal el "Ezequiel Zamora", el cual disponía de una gran cantidad de personas. Sin embargo, no abarcaba las necesidades de la comunidad, y por esta razón se decidió la separación general. El 25 de noviembre de 2019 se creó formalmente el Consejo Comunal Vuelta El Paraíso por medio de elecciones. Estos registros deben renovarse cada 2 años.</p>
+                <p>La Comuna Vuelta el Paraíso se encuentra ubicada en la ciudad de Los Teques, capital del estado Miranda en Venezuela. Esta comuna es conocida por ser una de las más antiguas de la ciudad y por su lucha constante por mejorar la calidad de vida de sus habitantes.</p>
+                <p>Los orígenes de esta comuna se remontan a principios del siglo XX, cuando la zona era una finca de cultivo de café y cacao. Con el paso del tiempo, la finca fue subdividida y vendida, lo que dio lugar al surgimiento de una comunidad que se dedicaba a la agricultura y la ganadería.</p>
+                <p>En las décadas de los 60 y 70, la Comuna Vuelta el Paraíso sufrió un importante proceso de migración debido a la industrialización que se llevaba a cabo en la ciudad de Los Teques. Muchos habitantes de la comuna emigraron en busca de mejores trabajos y oportunidades.</p>
+                <p>Hay una festividad particular de la comuna "Vuelta el Paraíso" que se celebra cada 31 de diciembre desde hace más de 40 años. En esta festividad, la comunidad se reúne para disfrutar de la música Gaita en la conocida "Esquina de Dato", cuyo nombre se debe a que las personas locales compartían entre ellos información acerca de los datos de caballos cuando jugaban a apostar 5 y 6 en sus tiempos.</p>
+                <p>En el año 2000, se inició un proceso de organización y lucha de la comunidad para la creación de la Comuna Vuelta el Paraíso. Se crearon diversos colectivos y organizaciones que impulsaron la organización comunal y la mejora de la calidad de vida de sus habitantes.</p>
+                <p>El conocido tequeño, plato tradicional venezolano, nació en la comunidad Vuelta el Paraíso, fabricado por las hermanas Báez en la década de 1920. El 21 de octubre de 2023 se hizo historia al fabricar el tequeño más grande del mundo, con una longitud de 15,30 metros, ganando un récord Guinness.</p>
+                <p>Actualmente, la Comuna Vuelta el Paraíso cuenta con una amplia variedad de proyectos y programas comunitarios, entre los que destacan la construcción de viviendas, la creación de huertos urbanos, la promoción de la cultura y el deporte, entre otros. Es un ejemplo de lucha y organización comunal en la ciudad de Los Teques, que ha mejorado la calidad de vida de sus habitantes mediante la creación de una amplia variedad de proyectos y programas comunitarios.</p>
+            </section>
+            
+            <section id="relacion" class="content-section">
+                <h2>Relación Comunidad-Institución</h2>
+                <p>En la comunidad del Consejo Comunal Vuelta El Paraíso está ubicada la E.T.C.N Dr. Jesús Muñoz Tébar. Es una institución pública educativa reconocida como una excelente opción para preparar estudiantes como técnicos medios a través de varias décadas.</p>
+                <p>En la actualidad, la Escuela Técnica Comercial Nacional Dr. Jesús Muñoz Tébar cuenta con una matrícula de 459 alumnos en el periodo 2022-2023, dispone de 27 aulas y 18 profesores. Por ser una escuela técnica comercial, se imparten cinco menciones, las cuales son: aduanas, administración, contabilidad, telemática, turismo y tributaria, en un horario de 7:00 a.m. a 5:20 p.m.</p>
+            </section>
+        </div>
     </main>
-    <footer class="alrededores-footer">
-        <p>© 2024 E.T.C.N Dr."Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
+    
+    <!-- Footer simplificado -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© 2024 E.T.C.N Dr. "Jesús Muñoz Tébar" / 6to año de Télematica (2024/2025)</p>
+        </div>
     </footer>
-    <script src="Comunidad.js"></script>
+    
+    <script>
+        // Toggle del menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            
+            // Cambiar ícono
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Animación suave al hacer clic en enlaces de navegación
+        document.querySelectorAll('.nav-btn').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Cerrar menú móvil si está abierto
+                    if (document.querySelector('.navbar').classList.contains('active')) {
+                        document.querySelector('.navbar').classList.remove('active');
+                        document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                        document.querySelector('.menu-toggle i').classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Animación de scroll para elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
