@@ -80,6 +80,13 @@ body::before {
     position: relative;
 }
 
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .page-title {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
     text-align: center;
@@ -89,6 +96,7 @@ body::before {
     position: relative;
     display: inline-block;
     padding-top: 10px;
+    flex-grow: 1;
 }
 
 /* Línea decorativa bajo el título */
@@ -349,16 +357,16 @@ main {
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    margin: 0.5rem 0;
     transition: var(--transition);
     will-change: transform;
     background: rgba(0,0,0,0.2);
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-toggle:hover {
@@ -367,20 +375,58 @@ main {
 
 /* Media Queries optimizadas */
 @media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    
     .menu-toggle {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        position: static;
+        margin-left: 0;
+        order: 1;
+    }
+    
+    .page-title {
+        order: 2;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+        margin: 0;
+        flex-grow: 1;
+        text-align: center;
     }
     
     .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--secondary-color);
+        z-index: 100;
         display: none;
-        margin-top: 1rem;
-        animation: fadeIn 0.5s ease-out;
+        padding: 1rem;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        border-top: 2px solid var(--accent-color);
+        margin-top: 0;
     }
     
     .navbar.active {
         display: block;
+        animation: slideDown 0.4s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
     .nav-links {
@@ -397,6 +443,8 @@ main {
         justify-content: flex-start;
         text-align: left;
         padding: 1.1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
     }
     
     .content-section {
@@ -439,6 +487,16 @@ main {
     .community-image {
         max-height: 300px;
     }
+    
+    .page-title {
+        font-size: 1.4rem;
+    }
+    
+    .menu-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
 }
 
 /* Mejora de accesibilidad */
@@ -463,6 +521,10 @@ a:focus, button:focus {
     }
     
     .header {
+        animation: none !important;
+    }
+    
+    .navbar.active {
         animation: none !important;
     }
 }
