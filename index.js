@@ -1,4 +1,3 @@
-// script.js
 // Menú desplegable para dispositivos móviles
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
@@ -11,24 +10,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Cerrar menú al hacer clic en un enlace (solo en móviles)
-    if (window.innerWidth <= 768) {
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
                 navMenu.classList.remove('active');
                 navToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            });
+            }
         });
-    }
+    });
     
     // Efecto de scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
     
