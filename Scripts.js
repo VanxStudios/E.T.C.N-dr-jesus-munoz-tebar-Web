@@ -44,3 +44,13 @@ document.querySelectorAll('.elegant-card').forEach(card => {
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
 });
+
+// Cerrar el menú al hacer scroll (nueva función)
+window.addEventListener('scroll', function() {
+    const navMenu = document.querySelector('.nav-menu');
+    if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        document.querySelector('.nav-toggle i').classList.remove('fa-times');
+        document.querySelector('.nav-toggle i').classList.add('fa-bars');
+    }
+});
