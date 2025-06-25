@@ -1,12 +1,20 @@
-// Menú desplegable para dispositivos móviles
+// Menú desplegable para dispositivos móviles (CORREGIDO)
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+    const navIcon = navToggle.querySelector('i');
     
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        navToggle.innerHTML = navMenu.classList.contains('active') ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        
+        // Cambiar ícono correctamente
+        if (navMenu.classList.contains('active')) {
+            navIcon.classList.remove('fa-bars');
+            navIcon.classList.add('fa-times');
+        } else {
+            navIcon.classList.remove('fa-times');
+            navIcon.classList.add('fa-bars');
+        }
     });
     
     // Cerrar menú al hacer clic en un enlace (solo en móviles)
@@ -15,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 navMenu.classList.remove('active');
-                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                navIcon.classList.remove('fa-times');
+                navIcon.classList.add('fa-bars');
             }
         });
     });
@@ -57,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             navMenu.classList.remove('active');
-            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            navIcon.classList.remove('fa-times');
+            navIcon.classList.add('fa-bars');
         }
     });
 });
