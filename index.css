@@ -84,6 +84,7 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1002; /* Asegura que esté por encima del menú */
 }
 
 .nav-menu {
@@ -441,7 +442,6 @@ body {
     
     .nav-toggle {
         display: block;
-        z-index: 1001;
     }
     
     .nav-menu {
@@ -450,7 +450,7 @@ body {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(94, 20, 20, 0.95);
+        background: rgba(94, 20, 20, 0.98);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -458,7 +458,7 @@ body {
         gap: 1.5rem;
         transform: translateY(-100%);
         transition: transform 0.5s ease;
-        z-index: 1000;
+        z-index: 1001; /* Asegura que esté por encima de otros elementos */
     }
     
     .nav-menu.active {
