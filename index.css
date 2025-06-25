@@ -113,6 +113,9 @@ body {
     gap: 0.8rem;
     transition: var(--transition);
     width: 100%;
+    /* Corrección para el problema de contenido blanco */
+    height: 0;
+    overflow: hidden;
 }
 
 .nav-link {
@@ -254,7 +257,7 @@ body {
     margin: -50px auto 5rem;
     padding: 0 2rem;
     position: relative;
-    z-index: 10;
+    z-index: 10; /* Asegurar que el contenido esté sobre el fondo */
 }
 
 .elegant-card {
@@ -509,12 +512,18 @@ body {
         transform: translateY(-100%);
         transition: transform 0.5s ease;
         pointer-events: none;
+        /* Corrección para el problema de contenido blanco */
+        height: 0;
+        overflow: hidden;
     }
     
     .nav-menu.active {
         transform: translateY(0);
         pointer-events: auto;
         animation: slideDown 0.4s ease-out;
+        /* Corrección para el problema de contenido blanco */
+        height: 100vh;
+        overflow: visible;
     }
     
     @keyframes slideDown {
@@ -551,23 +560,17 @@ body {
     .hero p {
         font-size: 1.1rem;
     }
-    
-    .history-intro {
-        flex-direction: column;
-    }
-    
-    .intro-logo {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .section-title {
-        font-size: 2rem;
+
+    /* Corrección para el problema de contenido blanco */
+    .hero::after {
+        height: 50px;
     }
     
     .main-container {
         padding: 0 1.5rem;
+        /* Corrección para el problema de contenido blanco */
+        margin-top: 0;
+        padding-top: 2rem;
     }
     
     .elegant-card {
