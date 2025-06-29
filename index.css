@@ -27,12 +27,10 @@ body {
     position: relative;
 }
 
-/* Deshabilitar scroll cuando el menú está abierto */
 body.menu-open {
     overflow: hidden;
 }
 
-/* Header Styles */
 .header {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     color: white;
@@ -84,7 +82,6 @@ body.menu-open {
     letter-spacing: 0.5px;
 }
 
-/* Navigation */
 .mobile-header {
     display: flex;
     justify-content: space-between;
@@ -114,7 +111,6 @@ body.menu-open {
     transform: scale(1.1);
 }
 
-/* Menú móvil - solución robusta */
 .nav-menu {
     position: fixed;
     top: 0;
@@ -167,12 +163,10 @@ body.menu-open {
     transform: translateY(-3px);
 }
 
-/* Menú para escritorio */
 .desktop-nav {
     display: none;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
     height: 85vh;
@@ -259,7 +253,6 @@ body.menu-open {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Main Content */
 .main-container {
     max-width: 1000px;
     margin: -50px auto 5rem;
@@ -409,7 +402,6 @@ body.menu-open {
     font-size: 1.1rem;
 }
 
-/* Footer */
 .footer {
     background: linear-gradient(to right, var(--primary-dark), var(--primary));
     color: white;
@@ -471,7 +463,7 @@ body.menu-open {
     transform: translateY(-5px);
 }
 
-/* Responsive Design */
+/* Responsive Design - Corrección de márgenes para móviles */
 @media (min-width: 769px) {
     .mobile-header {
         display: none;
@@ -564,6 +556,7 @@ body.menu-open {
     
     .section-title {
         font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
     
     .history-intro {
@@ -575,6 +568,17 @@ body.menu-open {
         width: 100%;
         max-width: 400px;
     }
+    
+    /* Ajuste para evitar que el texto toque los bordes */
+    .history-intro p,
+    .history-section p {
+        padding-right: 0.5rem;
+        padding-left: 1rem;
+    }
+    
+    .history-section p::before {
+        left: 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -584,14 +588,16 @@ body.menu-open {
     
     .hero h1 {
         font-size: 2rem;
+        padding: 0 1rem;
     }
     
     .section-title {
         font-size: 1.8rem;
+        padding: 0 0.5rem;
     }
     
     .elegant-card {
-        padding: 1.8rem;
+        padding: 1.8rem 1.2rem;
     }
     
     .cta-button {
@@ -601,10 +607,13 @@ body.menu-open {
     
     .history-section p {
         font-size: 1rem;
+        padding-right: 0.8rem;
+        padding-left: 1.2rem;
     }
     
     .institution-image {
         height: 300px;
+        margin: 2rem 0;
     }
     
     .school-name {
@@ -618,28 +627,37 @@ body.menu-open {
         font-size: 1.8rem;
     }
     
+    /* Corrección para que el texto no toque los bordes */
     .history-section p,
     .history-intro p {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .history-section p::before {
-        left: -15px;
+        left: 0;
+    }
+    
+    .image-caption {
+        padding: 0.8rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;
+        padding: 0 0.5rem;
     }
     
     .hero p {
         font-size: 1rem;
+        padding: 0 0.5rem;
     }
     
     .section-title {
         font-size: 1.7rem;
+        padding: 0 0.5rem;
     }
     
     .nav-link {
@@ -647,15 +665,16 @@ body.menu-open {
     }
     
     .main-container {
-        padding: 0 1.2rem;
+        padding: 0 1rem;
     }
     
     .elegant-card {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
     }
     
     .history-section p {
-        padding-left: 15px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .history-section p::before {
@@ -668,6 +687,15 @@ body.menu-open {
     
     .intro-logo {
         padding: 15px;
+    }
+    
+    /* Ajuste adicional para textos pequeños */
+    .history-section p,
+    .history-intro p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
