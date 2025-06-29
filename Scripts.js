@@ -1,4 +1,4 @@
-// Gestión del menú móvil - Solución robusta
+// Gestión del menú móvil
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const body = document.body;
